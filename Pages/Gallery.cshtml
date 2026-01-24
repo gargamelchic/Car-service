@@ -1,0 +1,113 @@
+﻿@page
+@model GalleryModel
+@{
+    ViewData["Title"] = "Галерея";
+}
+
+<div class="container py-5">
+    <h1 class="text-center mb-5">Наша галерея</h1>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <ul class="nav nav-pills justify-content-center mb-4" id="galleryTabs">
+                <li class="nav-item">
+                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all">
+                        Все фото
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#work">
+                        Рабочий процесс
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#results">
+                        Результаты
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#team">
+                        Наша команда
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="all">
+            <div class="row g-4">
+                @foreach (var image in Model.AllImages)
+                {
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item position-relative overflow-hidden rounded shadow">
+                                <img src="@image.Url" class="img-fluid" alt="@image.Title">
+                                <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 transition">
+                                    <div class="text-white text-center">
+                                        <h5>@image.Title</h5>
+                                        <p class="mb-0">@image.Category</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="work">
+            <div class="row g-4">
+                @foreach (var image in Model.GetImagesByCategory("work"))
+                {
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <img src="@image.Url" class="img-fluid rounded shadow" alt="@image.Title">
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="results">
+            <div class="row g-4">
+                @foreach (var image in Model.GetImagesByCategory("results"))
+                {
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <img src="@image.Url" class="img-fluid rounded shadow" alt="@image.Title">
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="team">
+            <div class="row g-4">
+                @foreach (var image in Model.GetImagesByCategory("team"))
+                {
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <img src="@image.Url" class="img-fluid rounded shadow" alt="@image.Title">
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+        <script>
+            // Добавляем эффект при наведении на изображения галереи
+            document.addEventListener('DOMContentLoaded', function() {
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                galleryItems.forEach(item => {
+                    item.addEventListener('mouseenter', function() {
+                        this.querySelector('.gallery-overlay').classList.remove('opacity-0');
+                    });
+                    item.addEventListener('mouseleave', function() {
+                        this.querySelector('.gallery-overlay').classList.add('opacity-0');
+                    });
+                });
+            });
+        </script>
+}

@@ -1,0 +1,67 @@
+﻿@page
+@model ServicesModel
+@{
+    ViewData["Title"] = "Услуги";
+}
+
+<div class="container py-5">
+    <h1 class="text-center mb-5">Наши услуги</h1>
+
+    <div class="row g-4">
+        @foreach (var service in Model.Services)
+        {
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-lg service-card">
+                        <div class="card-header bg-primary text-white text-center py-4">
+                            <i class="@service.Icon fa-3x mb-3"></i>
+                            <h4 class="card-title">@service.Title</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">@service.Description</p>
+                            <ul class="list-unstyled">
+                            @foreach (var item in service.Items)
+                            {
+                                        <li class="mb-2">
+                                            <i class="fas fa-check text-success me-2"></i>@item
+                                        </li>
+                            }
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 text-center pb-4">
+                        @if (!string.IsNullOrEmpty(service.Price))
+                        {
+                                    <h5 class="text-primary mb-3">@service.Price</h5>
+                        }
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                <i class="fas fa-info-circle me-2"></i>Узнать подробности
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        }
+    </div>
+</div>
+
+<!-- Модальное окно для связи -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Запросить информацию</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Для получения подробной информации о услугах, пожалуйста, свяжитесь с нами:</p>
+                <ul>
+                    <li><i class="fas fa-phone me-2"></i>Телефон: +7 (XXX) XXX-XX-XX</li>
+                    <li><i class="fas fa-envelope me-2"></i>Email: info@example.com</li>
+                </ul>
+                <p>Или посетите нашу <a asp-page="/Contacts">страницу контактов</a>.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <a asp-page="/Contacts" class="btn btn-primary">Перейти к контактам</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "О нас";
+}
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">О нашем учреждении</h1>
+
+            <div class="mb-5">
+                <h2 class="mb-3">Наша история</h2>
+                <p>@Model.AboutText</p>
+            </div>
+
+            <div class="mb-5">
+                <h2 class="mb-4">Наша миссия</h2>
+                <div class="row g-4">
+                    @foreach (var mission in Model.Missions)
+                    {
+                            <div class="col-md-6">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">
+                                            <i class="@mission.Icon me-2"></i>@mission.Title
+                                        </h5>
+                                        <p class="card-text">@mission.Description</p>
+                                    </div>
+                                </div>
+                            </div>
+                    }
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <h2 class="mb-4">Наши ценности</h2>
+                <ul class="list-group">
+                    @foreach (var value in Model.Values)
+                    {
+                            <li class="list-group-item border-0">
+                                <i class="fas fa-check text-success me-2"></i>@value
+                            </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="card bg-primary text-white">
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title">Хотите узнать больше?</h3>
+                    <p class="card-text mb-4">Свяжитесь с нами для получения дополнительной информации</p>
+                    <a asp-page="/Contacts" class="btn btn-light btn-lg">
+                        <i class="fas fa-phone me-2"></i>Связаться
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

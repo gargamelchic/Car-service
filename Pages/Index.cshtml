@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<!-- Герой-секция -->
+<section class="hero-section bg-primary text-white py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold">@Model.InstitutionName</h1>
+                <p class="lead">@Model.Slogan</p>
+                <p>@Model.Description</p>
+                <a asp-page="/Contacts" class="btn btn-light btn-lg mt-3">
+                    <i class="fas fa-phone me-2"></i>Связаться с нами
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow" alt="Главное изображение">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Особенности -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Почему выбирают нас?</h2>
+        <div class="row g-4">
+            @foreach (var feature in Model.Features)
+            {
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="feature-icon mb-3">
+                                    <i class="@feature.Icon fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="card-title">@feature.Title</h4>
+                                <p class="card-text">@feature.Description</p>
+                            </div>
+                        </div>
+                    </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Призыв к действию -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Готовы начать сотрудничество?</h2>
+        <p class="lead mb-4">Свяжитесь с нами сегодня для получения дополнительной информации</p>
+        <a asp-page="/Contacts" class="btn btn-primary btn-lg">
+            <i class="fas fa-envelope me-2"></i>Написать нам
+        </a>
+    </div>
+</section>
