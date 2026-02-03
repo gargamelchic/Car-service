@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Pages\\Shared",
+    "\\wwwroot\\css",
+    "\\wwwroot\\js",
+    "\\wwwroot\\lib",
+    "\\wwwroot\\lib\\bootstrap",
+    "\\wwwroot\\lib\\jquery-validation",
+    "\\wwwroot\\lib\\jquery-validation-unobtrusive",
+    "\\wwwroot\\lib\\jquery\\dist"
+  ],
+  "SelectedNode": "\\WebApplication1.csproj",
+  "PreviewInSolutionExplorer": false
+}

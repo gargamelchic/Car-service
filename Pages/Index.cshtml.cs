@@ -4,9 +4,9 @@ namespace WebApplication1.Pages
 {
     public class IndexModel : PageModel
     {
-        public string InstitutionName { get; set; } = "Название Учреждения";
-        public string Slogan { get; set; } = "Ваш слоган или краткое описание";
-        public string Description { get; set; } = "Краткое описание вашего учреждения, его миссии и ценностей. Опишите чем вы занимаетесь и почему клиенты должны выбрать именно вас.";
+        public string InstitutionName { get; set; } = "G2-Motors";
+        public string Slogan { get; set; } = "Диагностируем быстро, решаем проблемы навсегда.";
+        public string Description { get; set; } = "Мы — современный центр кузовного ремонта, объединивший высокие технологии восстановления металла с искусством идеальной покраски. Мы возвращаем им первозданный вид и вашу уверенность на дороге.";
 
         public List<Feature> Features { get; set; }
 

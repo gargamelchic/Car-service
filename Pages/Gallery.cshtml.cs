@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using static WebApplication1.Pages.ServicesModel;
 
 namespace WebApplication1.Pages
 {
@@ -11,16 +12,16 @@ namespace WebApplication1.Pages
         {
             AllImages = new List<GalleryImage>
             {
-                new GalleryImage { Url = "https://via.placeholder.com/400x300/007bff/ffffff?text=Работа+1", Title = "Наш офис", Category = "work" },
-                new GalleryImage { Url = "https://via.placeholder.com/400x300/28a745/ffffff?text=Результат+1", Title = "Достижения", Category = "results" },
-                new GalleryImage { Url = "https://via.placeholder.com/400x300/dc3545/ffffff?text=Команда+1", Title = "Наша команда", Category = "team" },
-                new GalleryImage { Url = "https://via.placeholder.com/400x300/ffc107/000000?text=Работа+2", Title = "Процесс работы", Category = "work" },
-                new GalleryImage { Url = "https://via.placeholder.com/400x300/17a2b8/ffffff?text=Результат+2", Title = "Успешные проекты", Category = "results" },
-                new GalleryImage { Url = "https://via.placeholder.com/400x300/6c757d/ffffff?text=Команда+2", Title = "Корпоратив", Category = "team" },
-                new GalleryImage { Url = "https://via.placeholder.com/400x300/343a40/ffffff?text=Работа+3", Title = "Оборудование", Category = "work" },
-                new GalleryImage { Url = "https://via.placeholder.com/400x300/007bff/ffffff?text=Результат+3", Title = "Награды", Category = "results" },
-                new GalleryImage { Url = "https://via.placeholder.com/400x300/28a745/ffffff?text=Команда+3", Title = "Обучение", Category = "team" }
-            };
+                new GalleryImage { src  = "фотки/Работа1.jpg", Title = "Наш офис", Category = "work" },
+                new GalleryImage { src  = "фотки/4.jpg", Title = "Достижения", Category = "results" },
+                new GalleryImage { src = "фотки/Оборудование1.jpg", Title = "Наша команда", Category = "team" },
+                new GalleryImage { src = "фотки/Работа2.jpg", Title = "Процесс работы", Category = "work" },
+                new GalleryImage { src = "фотки/4.jpg", Title = "Успешные проекты", Category = "results" },
+                new GalleryImage { src = "фотки/Оборудование2.jpg", Title = "Корпоратив", Category = "team" },
+                new GalleryImage { src = "фотки/Работа3.jpg", Title = "Оборудование", Category = "work" },
+                new GalleryImage { src = "фотки/4.jpg", Title = "Награды", Category = "results" },
+                new GalleryImage { src = "фотки/Оборудование3.jpg", Title = "Обучение", Category = "team" }
+            }; 
         }
 
         public List<GalleryImage> GetImagesByCategory(string category)
@@ -30,7 +31,7 @@ namespace WebApplication1.Pages
 
         public class GalleryImage
         {
-            public string Url { get; set; }
+            public string src { get; set; }
             public string Title { get; set; }
             public string Category { get; set; }
         }
