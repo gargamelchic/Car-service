@@ -59,65 +59,44 @@
         <div class="col-lg-7">
             <div class="card border-0 shadow-lg">
                 <div class="card-body p-4">
-                    <h3 class="card-title mb-4">Форма обратной связи</h3>
+                    <h3 class="card-title mb-4">Задайте вопрос нейросети</h3>
 
                     <form method="post">
                         <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label asp-for="ContactForm.Name" class="form-label">Имя *</label>
-                                <input asp-for="ContactForm.Name" class="form-control" required>
-                                <span asp-validation-for="ContactForm.Name" class="text-danger"></span>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label asp-for="ContactForm.Email" class="form-label">Email *</label>
-                                <input asp-for="ContactForm.Email" type="email" class="form-control" required>
-                                <span asp-validation-for="ContactForm.Email" class="text-danger"></span>
+                            <div class="mb-3">
+                                <label asp-for="AIChatForm.Name" class="form-label">Имя (необязательно)</label>
+                                <input asp-for="AIChatForm.Name" class="form-control">
+                                <span asp-validation-for="AIChatForm.Name" class="text-danger"></span>
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="ContactForm.Phone" class="form-label">Телефон</label>
-                            <input asp-for="ContactForm.Phone" class="form-control">
-                            <span asp-validation-for="ContactForm.Phone" class="text-danger"></span>
-                        </div>
-
-                        <div class="mb-3">
-                            <label asp-for="ContactForm.Subject" class="form-label">Тема *</label>
-                            <select asp-for="ContactForm.Subject" class="form-select" required>
-                                <option value="">Выберите тему</option>
-                                <option value="general">Общий вопрос</option>
-                                <option value="services">Информация об услугах</option>
-                                <option value="appointment">Запись на консультацию</option>
-                                <option value="cooperation">Сотрудничество</option>
-                                <option value="other">Другое</option>
-                            </select>
-                            <span asp-validation-for="ContactForm.Subject" class="text-danger"></span>
-                        </div>
-
-                        <div class="mb-3">
-                            <label asp-for="ContactForm.Message" class="form-label">Сообщение *</label>
-                            <textarea asp-for="ContactForm.Message" class="form-control" rows="5" required></textarea>
-                            <span asp-validation-for="ContactForm.Message" class="text-danger"></span>
+                            <label asp-for="AIChatForm.AIQuestion" class="form-label">Ваш вопрос *</label>
+                            <textarea asp-for="AIChatForm.AIQuestion" class="form-control" rows="6"
+                                      placeholder="пример вашего вопроса для нейросети: Машина плохо заводится утром, двигатель дымит белым дымом, пробег около 80 тыс. км, марка/модель: Toyota Camry V6." required></textarea>
+                            <span asp-validation-for="AIChatForm.AIQuestion" class="text-danger"></span>
                         </div>
 
                         <div class="form-check mb-4">
-                            <input asp-for="ContactForm.AgreeToPrivacy" class="form-check-input" required>
-                            <label asp-for="ContactForm.AgreeToPrivacy" class="form-check-label">
-                                Я согласен на обработку персональных данных
+                            <input asp-for="AIChatForm.AgreeToTerms" class="form-check-input" required>
+                            <label asp-for="AIChatForm.AgreeToTerms" class="form-check-label">
+                                Я принимаю условия использования нейросети
                             </label>
-                            <span asp-validation-for="ContactForm.AgreeToPrivacy" class="text-danger"></span>
+                            <span asp-validation-for="AIChatForm.AgreeToTerms" class="text-danger"></span>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-lg w-100">
-                            <i class="fas fa-paper-plane me-2"></i>Отправить сообщение
+                            <i class="fas fa-robot me-2"></i>Задать вопрос нейросети
                         </button>
                     </form>
 
-                    @if (Model.ShowSuccessMessage)
+                    @if (Model.ShowAIResponse)
                     {
-                            <div class="alert alert-success mt-4" role="alert">
-                                <i class="fas fa-check-circle me-2"></i>Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
-                            </div>
+                        <div class="alert alert-info mt-4" role="alert">
+                            <i class="fas fa-brain me-2"></i>
+                            <strong>Ответ нейросети:</strong>
+                            <p class="mb-0 mt-2">@Model.AIResponseText</p>
+                        </div>
                     }
                 </div>
             </div>

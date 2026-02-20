@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "luMAt7pb56w=",
+  "dgSpecHash": "NxjT4hDXfmI=",
   "success": true,
   "projectFilePath": "C:\\Users\\ThinkPad\\source\\repos\\gargamelchic\\Car-service\\WebApplication1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\gigachatadapter\\1.0.7\\gigachatadapter.1.0.7.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\gigachatsdk\\1.1.0\\gigachatsdk.1.1.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.net.http.json\\8.0.0\\system.net.http.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

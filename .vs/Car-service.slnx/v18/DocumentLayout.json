@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +50,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
@@ -62,8 +66,7 @@
               "RelativeToolTip": "Pages\\About.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T16:58:39.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T16:58:39.284Z"
             },
             {
               "$type": "Document",
@@ -75,8 +78,7 @@
               "RelativeToolTip": "wwwroot\\js\\site.js",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-01T16:54:06.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T16:54:06.105Z"
             },
             {
               "$type": "Document",
@@ -88,8 +90,7 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAB8AAAAAAAAAAAAswC4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-02-01T16:53:27.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T16:53:27.032Z"
             },
             {
               "$type": "Document",
@@ -97,9 +98,9 @@
               "Title": "WebApplication1.csproj",
               "DocumentMoniker": "C:\\Users\\ThinkPad\\source\\repos\\gargamelchic\\Car-service\\WebApplication1.csproj",
               "RelativeDocumentMoniker": "WebApplication1.csproj",
-              "ToolTip": "C:\\Users\\ThinkPad\\source\\repos\\gargamelchic\\Car-service\\WebApplication1.csproj*",
-              "RelativeToolTip": "WebApplication1.csproj*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ThinkPad\\source\\repos\\gargamelchic\\Car-service\\WebApplication1.csproj",
+              "RelativeToolTip": "WebApplication1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-02-01T16:44:06.281Z",
               "EditorCaption": ""
@@ -114,8 +115,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-01T16:44:03.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-01T16:44:03.936Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

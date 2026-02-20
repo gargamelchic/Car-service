@@ -24,6 +24,117 @@
     --border-gold: 2px solid #D4AF37;
 }
 
+
+/* ===== AI ЧАТ КОМПОНЕНТЫ ===== */
+.ai-category-label {
+    color: var(--primary-graphite);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.ai-category-select {
+    border: 2px solid var(--accent-gold-alt) !important;
+    background: var(--gradient-subtle) !important;
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    padding: 0.75rem 1rem !important;
+    border-radius: 8px !important;
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: background-ivory;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px;
+}
+
+    .ai-category-select:focus {
+        border-color: var(--accent-gold) !important;
+        box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25) !important;
+        background: white !important;
+        outline: none;
+    }
+
+    .ai-category-select:hover {
+        border-color: var(--accent-gold) !important;
+        box-shadow: var(--shadow-gold);
+    }
+
+.ai-category-placeholder {
+    background-color: var(--background-ivory) !important;
+    color: var(--text-muted) !important;
+    font-style: italic;
+    padding: 0.5rem;
+}
+
+.ai-category-option {
+    background-color: var(--background-ivory-alt) !important;
+    color: var(--primary-graphite) !important;
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+    .ai-category-option:hover,
+    .ai-category-option:focus,
+    .ai-category-option:checked {
+        background: var(--gradient-gold) !important;
+        color: var(--primary-graphite) !important;
+    }
+
+.ai-validation-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+    font-weight: 500;
+}
+
+/* Стили для опций в выпадающем списке (для браузеров, поддерживающих стилизацию) */
+select.ai-category-select option {
+    background-color: var(--background-ivory-alt);
+    color: var(--primary-graphite);
+    padding: 10px;
+}
+
+    select.ai-category-select option:first-child {
+        background-color: var(--background-ivory);
+        color: var(--text-muted);
+        font-style: italic;
+    }
+
+    /* Для Firefox */
+    select.ai-category-select option:checked {
+        background: var(--gradient-gold);
+        color: var(--primary-graphite);
+    }
+
+/* Дополнительные стили для улучшения внешнего вида */
+.ai-category-select::-ms-expand {
+    display: none;
+}
+
+/* Анимация при загрузке */
+.ai-category-select {
+    animation: fadeInSelect 0.5s ease;
+}
+
+@keyframes fadeInSelect {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ===== ОБЩИЕ СТИЛИ ===== */
 body {
     font-family: 'Roboto', 'Segoe UI', sans-serif;
